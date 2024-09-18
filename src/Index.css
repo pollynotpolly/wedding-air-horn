@@ -19,3 +19,30 @@
     font-size: 3.2em;
     line-height: 1.1;
   }
+
+
+#horn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centers the button vertically */
+}
+
+.rave.horn {
+  background-color: #ff5722; /* Bright orange color */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px 30px; /* Top/bottom and left/right padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.rave.horn:hover {
+  background-color: #e64a19; /* Darker shade on hover */
+}
+
+.rave.horn:active {
+  transform: scale(0.95); /* Slightly shrink the button on click */
+}
