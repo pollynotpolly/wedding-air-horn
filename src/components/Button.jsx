@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react"; // Import useState
+import AirHorn from '../assets/AirHorn.mp3'; // Correct path for audio file
+import Blobby from '../assets/blobby.mp3'; // Correct path for audio file
 
 const Button = () => {
+    const [clickCount, setClickCount] = useState(0);
+
     const handleRaveHornClick = () => {
-        const audio = new Audio('src\assets\just-an-air-horn.mp3');
+        setClickCount(prevCount => prevCount + 1);
+
+        // Decide which audio file to play
+        const playBlobbySound = Math.random() < 0.1 || clickCount % 10 === 0;
+        const audioFile = playBlobbySound ? Blobby : AirHorn; // Use imported variables
+        
+        const audio = new Audio(audioFile);
         audio.play().catch(error => {
             console.error("Error playing audio:", error);
         });
@@ -14,12 +24,13 @@ const Button = () => {
                 className="rave horn" 
                 onClick={handleRaveHornClick} 
                 title="Rave Horn">
-                Play Rave Horn
+                BLOB
             </button>
         </div>
     );
 }
 
 export default Button;
+
 
 
