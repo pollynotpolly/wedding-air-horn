@@ -7,10 +7,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: '/src/main.jsx', // Ensure the entry point is correctly defined
+        main: 'src/main.jsx', // Ensure this path is correct
       },
-      // Add external dependencies if needed
-      // external: ['some-external-module'],
     },
   },
   test: {
@@ -19,3 +17,4 @@ export default defineConfig({
     setupFiles: "./tests/setup.js",
   },
 });
+
