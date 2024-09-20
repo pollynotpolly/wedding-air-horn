@@ -43,7 +43,6 @@ h1, p {
 .rave.horn {
   background-color: var(--spot-color); /* Blobby Yellow Spot Color */
   color: #ff69b4;
-  border: 1px dotted #000000;
   border-radius: 50%;
   padding: 60px;
   width: 150px;

@@ -1,6 +1,6 @@
 import React, { useState } from "react"; // Import useState
-import AirHorn from '../assets/AirHorn.mp3'; // Correct path for audio file
-import Blobby from '../assets/blobby.mp3'; // Correct path for audio file
+import AirHorn from './AirHorn.mp3'; // Correct path for audio file
+import Blobby from './blobby.mp3'; // Correct path for audio file
 
 const Button = () => {
     const [clickCount, setClickCount] = useState(0);
