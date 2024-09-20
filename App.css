@@ -1,0 +1,88 @@
+:root {
+    font-family: system-ui, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    --background-color: #ff69b4; /* Blobby Pink */
+    --spot-color: #ffeb3b; /* Blobby Yellow Spots */
+    color: black;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    background-image: 
+      radial-gradient(circle at 20% 20%, var(--spot-color) 50px, transparent 51px),
+      radial-gradient(circle at 80% 40%, var(--spot-color) 70px, transparent 71px),
+      radial-gradient(circle at 50% 75%, var(--spot-color) 100px, transparent 101px),
+      radial-gradient(circle at 30% 70%, var(--spot-color) 60px, transparent 61px), /* New Spot */
+      radial-gradient(circle at 70% 30%, var(--spot-color) 80px, transparent 81px); /* New Spot */
+    background-size: 100% 100%;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  h1, p {
+    font-family: "Courier New", Courier, monospace; /* Typewriter font */
+    font-size: 1.2em;
+    line-height: 1.1;
+    text-align: center;
+    color: black;
+  }
+  
+  
+  #horn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .rave.horn {
+    background-color: var(--spot-color); /* Blobby Yellow Spot Color */
+    color: #ff69b4;
+    border-radius: 50%;
+    padding: 60px;
+    width: 150px;
+    height: 150px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add shading */
+  }
+  
+  .rave.horn:hover {
+    background-color: #fdd835; /* Slightly darker yellow on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+  }
+  
+  .rave.horn:active {
+    transform: scale(0.95); /* Slight shrink effect on click */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Softer shadow on click */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.4em;
+    }
+  
+    .rave.horn {
+      padding: 30px;
+      width: 100px;
+      height: 100px;
+      font-size: 18px;
+    }
+  }
+  
+  
+  
+  
