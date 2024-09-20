@@ -5,11 +5,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      input: {
-        main: 'src/main.jsx', // Ensure this path is correct
-      },
-    },
+  //   rollupOptions: {
+  //     input: {
+  //       main: 'src/main.jsx', // Ensure this path is correct
+  //     },
+  //   },
   },
   test: {
     globals: true, 
