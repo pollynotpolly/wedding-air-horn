@@ -21,7 +21,12 @@
       radial-gradient(circle at 70% 30%, var(--spot-color) 80px, transparent 81px); /* New Spot */
     background-size: 100% 100%;
     min-width: 320px;
-    min-height: 100vh;
+    height: 100vh;
+    /* max-height: 100%; */
+  }
+
+  app {
+    height: 100vh;
   }
   
   h1, p {
@@ -37,14 +42,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
   }
   
   .rave.horn {
     background-color: var(--spot-color); /* Blobby Yellow Spot Color */
     color: #ff69b4;
     border-radius: 50%;
-    padding: 60px;
+    /* padding: 60px; */
     width: 150px;
     height: 150px;
     font-family: "Courier New", Courier, monospace;
@@ -64,10 +69,6 @@
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
   }
   
-  .rave.horn:active {
-    transform: scale(0.95); /* Slight shrink effect on click */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Softer shadow on click */
-  }
   
   /* Responsive Adjustments */
   @media (max-width: 600px) {
