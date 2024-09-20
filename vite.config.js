@@ -1,22 +1,15 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',
-  build: {
-  //   rollupOptions: {
-  //     input: {
-  //       main: 'src/main.jsx', // Ensure this path is correct
-  //     },
-  //   },
-  },
   test: {
-    globals: true, 
-    environment: 'jsdom', 
-    setupFiles: './tests/setup.js',
+    globals: true,
+    environment: "jsdom",
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
+    },
   },
-});
-
-
+})
