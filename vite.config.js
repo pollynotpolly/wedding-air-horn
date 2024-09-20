@@ -2,7 +2,13 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 
-export default defineConfig({
+export default defineConfig(({ command, mode }) => {
+  
+  console.log(`Running in ${mode} mode`);
+  console.log(`Command: ${command}`);
+  console.log(`Current directory: ${process.cwd()}`);
+
+  return {
   plugins: [react()],
   base: './',
   build: {
@@ -26,4 +32,4 @@ export default defineConfig({
       reporter: ['text', 'json', 'html'],
     },
   },
-})
+}})
